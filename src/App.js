@@ -10,12 +10,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="landing" />
         <div className="titles">
           <h2>A New Kind of Business Card</h2>
-            <p>Enabled by NFC Technology -<br/> just like Apple Cards</p>
+          <p>
+            Enabled by NFC Technology - <br />
+            just like Apple Cards
+          </p>
           <button onClick={() => scrollToRef(footer)}>Join Waitlist</button>
         </div>
+        <div className="header-pic" />
       </header>
 
       <div className="info">
@@ -24,8 +27,8 @@ function App() {
           <h3>No Waits,</h3>
           <h3 className="big-color-title">Instant Connection.</h3>
           <p className="description">
-            without requiring people to take out their phones, and have
-            conversation being interrupted.
+            We remove the awkwardness from networking, <br />
+            so you can spend more time cultivating your relationships.
           </p>
         </div>
       </div>

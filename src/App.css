@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -22,27 +22,25 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
-.App-header .landing {
-  position: absolute;
-  background: url("https://i.imgur.com/dMzhOMn.png");
-  background-size: cover;
+.App-header .header-pic {
+  background: url("https://i.imgur.com/YkYoZQ3.png");
   width: 80vw;
-  height: 80vh;
-  bottom: 0;
+  height: 750px;
+  background-size: cover;
+  justify-self: flex-end;
 }
 
 .App-header .titles {
-  position: absolute;
-  bottom: 40vh;
-  right: 15vw;
-  width: 35vw;
+  margin: 60px 0 0;
 }
 
 .App-header .titles h2 {
   color: black;
   font-size: 64px;
+  width: 35vw;
 }
 
 .App-header .titles p {
@@ -62,6 +60,7 @@
   background: #333;
   color: #fff;
   outline: none;
+  letter-spacing: 0.9px;
 }
 
 .App-header .titles button:hover {
@@ -87,6 +86,7 @@
   font: 14px Helvetica, Arial, sans-serif;
   width: 100%;
 }
+
 #mc_embed_signup .email {
   font-size: 20px;
   padding: 3px;
@@ -95,6 +95,7 @@
   border: 1px solid #333;
   padding-left: 14px;
 }
+
 #mc_embed_signup .btn-submit {
   /* background: #000; */
   font-size: 18px;
@@ -117,17 +118,16 @@
 
 .info {
   background-color: #111;
-  height: 100vh;
-  width: 100xw;
+  height: 800px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.title-wrapper{
-  width:70%;
-  height: 100%;
-  padding-top: 10vh;
+
+.title-wrapper {
+  width: 70%;
 }
 
 .info h3 {
@@ -137,7 +137,7 @@
   text-align: left;
 }
 
-.big-color-title{
+.big-color-title {
   /* font-size: 100px; */
   background-repeat: no-repeat;
   background-image: url(/text_bg.jpg);
@@ -158,7 +158,7 @@
 }
 
 .footer {
-  height: 180px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,15 +166,15 @@
 }
 
 .footer .words h3 {
-  font-size: 20px;
+  font-size: 36px;
   margin: 0;
 }
 
 .footer .words p {
   margin-top: 5px;
+  font-size: 20px;
   margin-bottom: 24px;
 }
-
 
 @media only screen and (max-width: 840px) {
   .App-header .landing {
@@ -182,6 +182,7 @@
     width: 100vw;
     background-position: 50%;
     bottom: 0;
+    position: absolute;
   }
 
   .App-header .titles {
@@ -194,22 +195,34 @@
   }
 
   .App-header .titles h2 {
-    font-size: 60px;
+    font-size: 48px;
     margin-top: 80px;
+    width: 90vw;
+    text-align: center;
   }
 
   .App-header .titles p {
-    font-size: 24px;
+    font-size: 22px;
     width: 80vw;
     margin: 0 auto;
     margin-bottom: 20px;
   }
 
+  .App-header .titles button {
+    margin: 20px 0 40px;
+  }
+
+  .App-header .header-pic {
+    width: 100vw;
+    height: 300px;
+    background-size: cover;
+  }
+
   #mc_embed_signup {
     margin-top: 40px;
   }
-  
-  .title-wrapper{
+
+  .title-wrapper {
     width: 90%;
   }
 
@@ -223,5 +236,14 @@
 
   .footer #mc_embed_signup {
     margin-top: 0px;
+  }
+
+  .footer {
+    height: 400px;
+  }
+
+  #mc_embed_signup .btn-submit {
+    margin-left: 0;
+    margin-top: 5px;
   }
 }
