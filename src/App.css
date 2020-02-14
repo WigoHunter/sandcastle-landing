@@ -37,7 +37,7 @@
   position: absolute;
   bottom: 40vh;
   right: 15vw;
-  width: 30vw;
+  width: 35vw;
 }
 
 .App-header .titles h2 {
@@ -48,7 +48,24 @@
 .App-header .titles p {
   color: black;
   margin-top: -26px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.App-header .titles button {
+  margin-top: -5px;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  background: #333;
+  color: #fff;
+  outline: none;
+}
+
+.App-header .titles button:hover {
+  transform: scale(1.1);
 }
 
 .App-link {
@@ -73,18 +90,29 @@
 #mc_embed_signup .email {
   font-size: 20px;
   padding: 3px;
+  outline: none;
+  border-radius: 100px;
+  border: 1px solid #333;
+  padding-left: 14px;
 }
 #mc_embed_signup .btn-submit {
   /* background: #000; */
-  font-size: 20px;
+  font-size: 18px;
   height: 32px;
-  border: 1px solid grey;
+  border: 1px solid #333;
+  background: #333;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 20px;
+  padding: 0 16px;
+  border-radius: 100px;
 }
 
 #mc_embed_signup .btn-submit:hover {
   /* background: #000; */
-  background: #ccc;
+  background: #333;
   transition: all 0.5s ease;
+  transform: scale(1.1);
 }
 
 .info {
@@ -110,11 +138,21 @@
 }
 
 .footer {
-  height: 80px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.footer .words h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.footer .words p {
+  margin-top: 5px;
+  margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 840px) {
@@ -143,6 +181,7 @@
     font-size: 24px;
     width: 80vw;
     margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   #mc_embed_signup {
@@ -151,5 +190,9 @@
 
   .info p {
     width: 80vw;
+  }
+
+  .footer #mc_embed_signup {
+    margin-top: 0px;
   }
 }

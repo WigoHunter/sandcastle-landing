@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./App.css";
 
 function App() {
+  const footer = useRef(null);
   const [email, setEmail] = useState("");
+
+  const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
 
   return (
     <div className="App">
@@ -11,38 +14,7 @@ function App() {
         <div className="titles">
           <h2>A New Kind of Business Card</h2>
           <p>Enabled by NFC Technology - just like Apple Cards</p>
-
-          <div id="mc_embed_signup">
-            <form
-              action="https://gmail.us4.list-manage.com/subscribe/post?u=28dfefda59d885f2b409f916a&amp;id=c05b220e77"
-              method="post"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              class="validate"
-              target="_blank"
-              novalidate
-            >
-              <div id="mc_embed_signup_scroll">
-                <input
-                  type="email"
-                  value={email}
-                  name="EMAIL"
-                  onChange={e => setEmail(e.target.value)}
-                  class="email"
-                  id="mce-EMAIL"
-                  placeholder="email address"
-                  required
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="button btn-submit"
-                />
-              </div>
-            </form>
-          </div>
+          <button onClick={() => scrollToRef(footer)}>Join Waitlist</button>
         </div>
       </header>
 
@@ -54,8 +26,42 @@ function App() {
         </p>
       </div>
 
-      <div className="footer">
-        <p>Made by a group of master students from Cornell Tech.</p>
+      <div className="footer" id="footer" ref={footer}>
+        <div className="words">
+          <h3>Launching Soon!</h3>
+          <p>Subscribe now to access the launch-day deal of 50% off.</p>
+        </div>
+        <div id="mc_embed_signup">
+          <form
+            action="https://gmail.us4.list-manage.com/subscribe/post?u=28dfefda59d885f2b409f916a&amp;id=c05b220e77"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_blank"
+            novalidate
+          >
+            <div id="mc_embed_signup_scroll">
+              <input
+                type="email"
+                value={email}
+                name="EMAIL"
+                onChange={e => setEmail(e.target.value)}
+                class="email"
+                id="mce-EMAIL"
+                placeholder="email address"
+                required
+              />
+              <input
+                type="submit"
+                value="Join Waitlist"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button btn-submit"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
