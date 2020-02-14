@@ -13,17 +13,21 @@ function App() {
         <div className="landing" />
         <div className="titles">
           <h2>A New Kind of Business Card</h2>
-          <p>Enabled by NFC Technology - just like Apple Cards</p>
+            <p>Enabled by NFC Technology -<br/> just like Apple Cards</p>
           <button onClick={() => scrollToRef(footer)}>Join Waitlist</button>
         </div>
       </header>
 
       <div className="info">
-        <h3>Instant Connection.</h3>
-        <p>
-          without requiring people to take out their phones, and have
-          conversation being interrupted.
-        </p>
+        <div className="title-wrapper">
+          <h3>No Waste,</h3>
+          <h3>No Waits,</h3>
+          <h3 className="big-color-title">Instant Connection.</h3>
+          <p className="description">
+            without requiring people to take out their phones, and have
+            conversation being interrupted.
+          </p>
+        </div>
       </div>
 
       <div className="footer" id="footer" ref={footer}>
